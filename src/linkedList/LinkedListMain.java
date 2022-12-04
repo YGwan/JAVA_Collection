@@ -6,6 +6,6 @@ public class LinkedListMain {
         System.out.println("############ LinkedList ############");
         LinkedList numbers = new LinkedList();
         numbers.addFirst(1);
-        System.out.println(numbers);
+        numbers.addLast(2);
     }
 }
