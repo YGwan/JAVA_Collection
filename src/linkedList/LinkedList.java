@@ -20,4 +20,14 @@ public class LinkedList {
             return String.valueOf(this.data);
         }
     }
+
+    public void addFirst(Object input) {
+        Node newNode = new Node(input);
+        newNode.next = head;
+        head = newNode;
+        size++;
+        if (head.next == null) {
+            tail = head;
+        }
+    }
 }
