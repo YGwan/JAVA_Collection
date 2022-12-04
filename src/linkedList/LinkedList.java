@@ -41,4 +41,25 @@ public class LinkedList {
             size++;
         }
     }
+
+    private Node node(int index) {
+        Node node = head;
+        for (int order = 0; order < index; order++) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    public void add(int list, Object input) {
+        if (list == 0) {
+            addFirst(input);
+        } else {
+            Node previousNode = node(list - 1);
+            Node subsequentNode = previousNode.next;
+            Node newNode = new Node(input);
+            previousNode.next = newNode;
+            newNode.next = subsequentNode;
+            size++;
+        }
+    }
 }
