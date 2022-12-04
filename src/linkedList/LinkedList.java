@@ -129,5 +129,12 @@ public class LinkedList {
         ListIterator() {
             next = head;
         }
+
+        public Object next() {
+            previousNode = next;
+            next = previousNode.next;
+            nextIndex++;
+            return previousNode.data;
+        }
     }
 }
