@@ -62,4 +62,18 @@ public class LinkedList {
             size++;
         }
     }
+
+    public String toString() {
+        if (head == null) {
+            return "[]";
+        }
+        Node node = head;
+        StringBuilder str = new StringBuilder("[");
+
+        while (node.next != null) {
+            str.append(node.data).append(", ");
+            node = node.next;
+        }
+        return str.append(node.data).append("]").toString();
+    }
 }

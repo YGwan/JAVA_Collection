@@ -7,5 +7,7 @@ public class LinkedListMain {
         LinkedList numbers = new LinkedList();
         numbers.addFirst(1);
         numbers.addLast(2);
+        numbers.add(1,8);
+        System.out.println(numbers);
     }
 }
