@@ -81,6 +81,10 @@ public class LinkedList {
         size--;
     }
 
+    public void removeLast() {
+        remove(size - 1);
+    }
+
 
     public String toString() {
         if (head == null) {
