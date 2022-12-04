@@ -63,6 +63,11 @@ public class LinkedList {
         }
     }
 
+    public void removeFirst() {
+        head = head.next;
+        size--;
+    }
+
     public String toString() {
         if (head == null) {
             return "[]";

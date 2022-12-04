@@ -9,5 +9,7 @@ public class LinkedListMain {
         numbers.addLast(2);
         numbers.add(1,8);
         System.out.println(numbers);
+        numbers.removeFirst();
+        System.out.println(numbers);
     }
 }
