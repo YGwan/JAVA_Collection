@@ -85,6 +85,23 @@ public class LinkedList {
         remove(size - 1);
     }
 
+    public int size() {
+        return size;
+    }
+
+    public Object get(int index) {
+        return node(index).data;
+    }
+
+    public int indexOf(Object data) {
+        for (int index = 0; index < size; index++) {
+            if (node(index).data == data) {
+                return index;
+            }
+        }
+        return -1;
+    }
+
 
     public String toString() {
         if (head == null) {
