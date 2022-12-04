@@ -102,7 +102,6 @@ public class LinkedList {
         return -1;
     }
 
-
     public String toString() {
         if (head == null) {
             return "[]";
@@ -115,5 +114,20 @@ public class LinkedList {
             node = node.next;
         }
         return str.append(node.data).append("]").toString();
+    }
+
+    public ListIterator listIterator() {
+        return new ListIterator();
+    }
+
+    class ListIterator {
+
+        private Node next;
+        private Node previousNode;
+        private int nextIndex = 0;
+
+        ListIterator() {
+            next = head;
+        }
     }
 }
