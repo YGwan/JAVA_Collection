@@ -39,11 +39,11 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="LinkedListMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="linkedList.LinkedListMain" />
+      <option name="MAIN_CLASS_NAME" value="controller.LinkedListMain" />
       <module name="List" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="linkedList.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

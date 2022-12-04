@@ -1,4 +1,6 @@
-package linkedList;
+package controller;
+
+import linkedList.LinkedList;
 
 public class LinkedListMain {
 
