@@ -10,7 +10,7 @@ public class LinkedList {
         Node newNode = new Node(input);
         newNode.next = head;
         head = newNode;
-        size++;
+        addSize();
         if (head.next == null) {
             tail = head;
         }
@@ -25,7 +25,7 @@ public class LinkedList {
             Node newNode = new Node(input);
             previousNode.next = newNode;
             newNode.next = subsequentNode;
-            size++;
+            addSize();
         }
     }
 
@@ -36,7 +36,7 @@ public class LinkedList {
         } else {
             tail.next = newNode;
             tail = newNode;
-            size++;
+            addSize();
         }
     }
 
@@ -62,16 +62,20 @@ public class LinkedList {
         remove(size - 1);
     }
 
-    private Node findNode(int index) {
-        Node node = head;
-        for (int order = 0; order < index; order++) {
-            node = node.next;
-        }
-        return node;
+    public Node getHeadNode() {
+        return head;
+    }
+
+    public void setHeadNode(Node newHeadNode) {
+        head = newHeadNode;
     }
 
     public int size() {
         return size;
+    }
+
+    protected void addSize() {
+        size++;
     }
 
     public Object get(int index) {
@@ -101,51 +105,16 @@ public class LinkedList {
         return str.append(node.data).append("]").toString();
     }
 
+    private Node findNode(int index) {
+        Node node = head;
+        for (int order = 0; order < index; order++) {
+            node = node.next;
+        }
+        return node;
+    }
+
     public ListIterator listIterator() {
-        return new ListIterator();
+        return new ListIterator(LinkedList.this);
     }
 
-    class ListIterator {
-
-        private Node next;
-        private Node previousNode;
-        private int nextIndex = 0;
-
-        ListIterator() {
-            next = head;
-        }
-
-        public Object next() {
-            previousNode = next;
-            next = previousNode.next;
-            nextIndex++;
-            return previousNode.data;
-        }
-
-        public boolean hasNext() {
-            return nextIndex < size();
-        }
-
-        public void add(Object input) {
-            Node newNode = new Node(input);
-
-            if (previousNode == null) {
-                head = newNode;
-            } else {
-                previousNode.next = newNode;
-            }
-            newNode.next = next;
-            previousNode = newNode;
-            nextIndex++;
-            size++;
-        }
-
-        public void remove() {
-            if(nextIndex == 0) {
-                throw new IllegalStateException();
-            }
-            LinkedList.this.remove(nextIndex-1);
-            nextIndex--;
-        }
-    }
 }

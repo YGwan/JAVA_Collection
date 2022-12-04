@@ -9,8 +9,4 @@ class Node {
         this.data = input;
         this.next = null;
     }
-
-    public String toString() {
-        return String.valueOf(this.data);
-    }
 }
