@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : ListIterator의 add 메서드 구현">
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="rename : 구현후 실행부 분리">
+      <change afterPath="$PROJECT_DIR$/src/linkedList/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/LinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670145104080</updated>
-      <workItem from="1670145193413" duration="1733000" />
+      <workItem from="1670145193413" duration="2531000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -151,7 +153,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670146909025</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat : ListIterator의 remove 메서드 구현">
+      <created>1670146947560</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670146947560</updated>
+    </task>
+    <task id="LOCAL-00014" summary="rename : 구현후 실행부 분리">
+      <created>1670147075615</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670147075615</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +198,8 @@
     <MESSAGE value="feat : ListIterator의 next 메서드 구현" />
     <MESSAGE value="feat : ListIterator의 hasNext 메서드 구현" />
     <MESSAGE value="feat : ListIterator의 add 메서드 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : ListIterator의 add 메서드 구현" />
+    <MESSAGE value="feat : ListIterator의 remove 메서드 구현" />
+    <MESSAGE value="rename : 구현후 실행부 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename : 구현후 실행부 분리" />
   </component>
 </project>
