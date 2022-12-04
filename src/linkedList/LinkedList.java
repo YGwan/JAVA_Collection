@@ -6,7 +6,7 @@ public class LinkedList {
     private Node tail;
     private int size = 0;
 
-    public void addFirst(Object input) {
+    public void add(Object input) {
         Node newNode = new Node(input);
         newNode.next = head;
         head = newNode;
@@ -16,10 +16,23 @@ public class LinkedList {
         }
     }
 
+    public void add(int list, Object input) {
+        if (list == 0) {
+            add(input);
+        } else {
+            Node previousNode = findNode(list - 1);
+            Node subsequentNode = previousNode.next;
+            Node newNode = new Node(input);
+            previousNode.next = newNode;
+            newNode.next = subsequentNode;
+            size++;
+        }
+    }
+
     public void addLast(Object input) {
         Node newNode = new Node(input);
         if (size == 0) {
-            addFirst(input);
+            add(input);
         } else {
             tail.next = newNode;
             tail = newNode;
@@ -27,25 +40,12 @@ public class LinkedList {
         }
     }
 
-    private Node node(int index) {
+    private Node findNode(int index) {
         Node node = head;
         for (int order = 0; order < index; order++) {
             node = node.next;
         }
         return node;
-    }
-
-    public void add(int list, Object input) {
-        if (list == 0) {
-            addFirst(input);
-        } else {
-            Node previousNode = node(list - 1);
-            Node subsequentNode = previousNode.next;
-            Node newNode = new Node(input);
-            previousNode.next = newNode;
-            newNode.next = subsequentNode;
-            size++;
-        }
     }
 
     public void removeFirst() {
@@ -57,7 +57,7 @@ public class LinkedList {
         if (index == 0) {
             removeFirst();
         }
-        Node previousNode = node(index - 1);
+        Node previousNode = findNode(index - 1);
         Node doDeletedNode = previousNode.next;
         previousNode.next = previousNode.next.next;
         if (doDeletedNode == tail) {
@@ -75,12 +75,12 @@ public class LinkedList {
     }
 
     public Object get(int index) {
-        return node(index).data;
+        return findNode(index).data;
     }
 
     public int indexOf(Object data) {
         for (int index = 0; index < size; index++) {
-            if (node(index).data == data) {
+            if (findNode(index).data == data) {
                 return index;
             }
         }
