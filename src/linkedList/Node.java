@@ -1,11 +1,11 @@
 package linkedList;
 
-class Node {
+class Node<T> {
 
-    final Object data;
-    Node next;
+    final T data;
+    Node<T> next;
 
-    public Node(Object input) {
+    public Node(T input) {
         this.data = input;
         this.next = null;
     }

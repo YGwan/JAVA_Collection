@@ -4,14 +4,14 @@ import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class LinkedList implements Iterable {
+public class YGLinkedList<T> implements Iterable<T> {
 
-    private Node head;
-    private Node tail;
+    private Node<T> head;
+    private Node<T> tail;
     private int size = 0;
 
-    public void addFirst(Object input) {
-        Node newNode = new Node(input);
+    public void addFirst(T input) {
+        Node<T> newNode = new Node<T>(input);
         newNode.next = head;
         head = newNode;
         addSize();
@@ -20,25 +20,25 @@ public class LinkedList implements Iterable {
         }
     }
 
-    public void add(int list, Object input) {
-        if (list == 0) {
+    public void add(int index, T input) {
+        if (index == 0) {
             addFirst(input);
         } else {
-            Node previousNode = findNode(list - 1);
-            Node subsequentNode = previousNode.next;
-            Node newNode = new Node(input);
+            Node<T> previousNode = findNode(index - 1);
+            Node<T> subsequentNode = previousNode.next;
+            Node<T> newNode = new Node<T>(input);
             previousNode.next = newNode;
             newNode.next = subsequentNode;
             addSize();
         }
     }
 
-    public void add(Object input) {
+    public void add(T input) {
         addFirst(input);
     }
 
-    public void addLast(Object input) {
-        Node newNode = new Node(input);
+    public void addLast(T input) {
+        Node<T> newNode = new Node<T>(input);
         if (size == 0) {
             addFirst(input);
         } else {
@@ -57,8 +57,8 @@ public class LinkedList implements Iterable {
         if (index == 0) {
             remove();
         }
-        Node previousNode = findNode(index - 1);
-        Node doDeletedNode = previousNode.next;
+        Node<T> previousNode = findNode(index - 1);
+        Node<T> doDeletedNode = previousNode.next;
         previousNode.next = previousNode.next.next;
         if (doDeletedNode == tail) {
             tail = previousNode;
@@ -70,7 +70,7 @@ public class LinkedList implements Iterable {
         remove(size - 1);
     }
 
-    public Node getHeadNode() {
+    public Node<T> getHeadNode() {
         return head;
     }
 
@@ -78,15 +78,15 @@ public class LinkedList implements Iterable {
         return size;
     }
 
-    private void addSize() {
+    protected void addSize() {
         size++;
     }
 
-    public Object get(int index) {
+    public T get(int index) {
         return findNode(index).data;
     }
 
-    public int indexOf(Object data) {
+    public int indexOf(T data) {
         for (int index = 0; index < size; index++) {
             if (findNode(index).data == data) {
                 return index;
@@ -99,7 +99,7 @@ public class LinkedList implements Iterable {
         if (head == null) {
             return "[]";
         }
-        Node node = head;
+        Node<T> node = head;
         StringBuilder str = new StringBuilder("[");
 
         while (node.next != null) {
@@ -109,8 +109,8 @@ public class LinkedList implements Iterable {
         return str.append(node.data).append("]").toString();
     }
 
-    private Node findNode(int index) {
-        Node node = head;
+    private Node<T> findNode(int index) {
+        Node<T> node = head;
         for (int order = 0; order < index; order++) {
             node = node.next;
         }
@@ -118,11 +118,11 @@ public class LinkedList implements Iterable {
     }
 
     public ListIterator listIterator() {
-        return new ListIterator(LinkedList.this);
+        return new ListIterator<T>(YGLinkedList.this);
     }
 
     @Override
-    public Iterator iterator() {
+    public Iterator<T> iterator() {
         return listIterator();
     }
 
@@ -132,7 +132,7 @@ public class LinkedList implements Iterable {
     }
 
     @Override
-    public Spliterator spliterator() {
+    public Spliterator<T> spliterator() {
         return Iterable.super.spliterator();
     }
 }

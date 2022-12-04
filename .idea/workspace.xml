@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : iterator 구조 생성 및 구현 -&gt; foreach 사용 가능">
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="fix : addFirst() 메서드로 메서드명 변경, add로직 추가">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/LinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LinkedListMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/YGLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linkedList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/ListIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/Node.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670150363857</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix : addFirst() 메서드로 메서드명 변경, add로직 추가">
+      <created>1670172605459</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670172605459</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +252,7 @@
     <MESSAGE value="refactor : LinkedList의 remove함수 오버로딩 처리" />
     <MESSAGE value="refactor : ListIterator 클래스 분리" />
     <MESSAGE value="feat : iterator 구조 생성 및 구현 -&gt; foreach 사용 가능" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : iterator 구조 생성 및 구현 -&gt; foreach 사용 가능" />
+    <MESSAGE value="fix : addFirst() 메서드로 메서드명 변경, add로직 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : addFirst() 메서드로 메서드명 변경, add로직 추가" />
   </component>
 </project>

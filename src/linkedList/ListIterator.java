@@ -2,33 +2,33 @@ package linkedList;
 
 import java.util.Iterator;
 
-public class ListIterator implements Iterator {
+public class ListIterator<T> implements Iterator<T> {
 
-    private final LinkedList linkedList;
-    private Node next;
+    private final YGLinkedList<T> YGLinkedList;
+    private Node<T> next;
     private int nextIndex = 0;
 
-    ListIterator(LinkedList linkedList) {
-        this.linkedList = linkedList;
-        next = linkedList.getHeadNode();
+    ListIterator(YGLinkedList<T> YGLinkedList) {
+        this.YGLinkedList = YGLinkedList;
+        next = YGLinkedList.getHeadNode();
     }
 
-    public Object next() {
-        Node previousNode = next;
+    public T next() {
+        Node<T> previousNode = next;
         next = previousNode.next;
         nextIndex++;
         return previousNode.data;
     }
 
     public boolean hasNext() {
-        return nextIndex < linkedList.size();
+        return nextIndex < YGLinkedList.size();
     }
 
     public void remove() {
         if (nextIndex == 0) {
             throw new IllegalStateException();
         }
-        linkedList.remove(nextIndex - 1);
+        YGLinkedList.remove(nextIndex - 1);
         nextIndex--;
     }
 }
