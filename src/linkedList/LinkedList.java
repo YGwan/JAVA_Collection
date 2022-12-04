@@ -1,12 +1,16 @@
 package linkedList;
 
-public class LinkedList {
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
+public class LinkedList implements Iterable {
 
     private Node head;
     private Node tail;
     private int size = 0;
 
-    public void add(Object input) {
+    public void addFirst(Object input) {
         Node newNode = new Node(input);
         newNode.next = head;
         head = newNode;
@@ -18,7 +22,7 @@ public class LinkedList {
 
     public void add(int list, Object input) {
         if (list == 0) {
-            add(input);
+            addFirst(input);
         } else {
             Node previousNode = findNode(list - 1);
             Node subsequentNode = previousNode.next;
@@ -29,10 +33,14 @@ public class LinkedList {
         }
     }
 
+    public void add(Object input) {
+        addFirst(input);
+    }
+
     public void addLast(Object input) {
         Node newNode = new Node(input);
         if (size == 0) {
-            add(input);
+            addFirst(input);
         } else {
             tail.next = newNode;
             tail = newNode;
@@ -66,15 +74,11 @@ public class LinkedList {
         return head;
     }
 
-    public void setHeadNode(Node newHeadNode) {
-        head = newHeadNode;
-    }
-
     public int size() {
         return size;
     }
 
-    protected void addSize() {
+    private void addSize() {
         size++;
     }
 
@@ -115,5 +119,20 @@ public class LinkedList {
 
     public ListIterator listIterator() {
         return new ListIterator(LinkedList.this);
+    }
+
+    @Override
+    public Iterator iterator() {
+        return listIterator();
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+        Iterable.super.forEach(action);
+    }
+
+    @Override
+    public Spliterator spliterator() {
+        return Iterable.super.spliterator();
     }
 }

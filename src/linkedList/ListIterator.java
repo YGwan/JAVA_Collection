@@ -1,10 +1,11 @@
 package linkedList;
 
-public class ListIterator {
+import java.util.Iterator;
+
+public class ListIterator implements Iterator {
 
     private final LinkedList linkedList;
     private Node next;
-    private Node previousNode;
     private int nextIndex = 0;
 
     ListIterator(LinkedList linkedList) {
@@ -13,7 +14,7 @@ public class ListIterator {
     }
 
     public Object next() {
-        previousNode = next;
+        Node previousNode = next;
         next = previousNode.next;
         nextIndex++;
         return previousNode.data;
@@ -21,20 +22,6 @@ public class ListIterator {
 
     public boolean hasNext() {
         return nextIndex < linkedList.size();
-    }
-
-    public void add(Object input) {
-        Node newNode = new Node(input);
-
-        if (previousNode == null) {
-            linkedList.setHeadNode(newNode);
-        } else {
-            previousNode.next = newNode;
-        }
-        newNode.next = next;
-        previousNode = newNode;
-        nextIndex++;
-        linkedList.addSize();
     }
 
     public void remove() {

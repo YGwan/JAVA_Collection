@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="refactor : ListIterator 클래스 분리">
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : iterator 구조 생성 및 구현 -&gt; foreach 사용 가능">
       <change beforePath="$PROJECT_DIR$/src/controller/LinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LinkedListMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/linkedList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/ListIterator.java" afterDir="false" />
@@ -35,15 +35,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/yonggwan/GitHub/JAVA_Collection/List",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yonggwan/GitHub/JAVA_Collection/List&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="linkedList" />
@@ -242,6 +242,7 @@
     <MESSAGE value="refactor : LinkedList의 add함수 오버로딩 처리" />
     <MESSAGE value="refactor : LinkedList의 remove함수 오버로딩 처리" />
     <MESSAGE value="refactor : ListIterator 클래스 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor : ListIterator 클래스 분리" />
+    <MESSAGE value="feat : iterator 구조 생성 및 구현 -&gt; foreach 사용 가능" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : iterator 구조 생성 및 구현 -&gt; foreach 사용 가능" />
   </component>
 </project>
