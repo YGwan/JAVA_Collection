@@ -19,6 +19,10 @@ public class LinkedListMain {
         }
         i.remove();
         System.out.println(numbers);
+        numbers.removeLast();
+        System.out.println(numbers);
         System.out.println(numbers.size());
+        System.out.println(numbers.get(0));
+        System.out.println(numbers.indexOf(20));
     }
 }
