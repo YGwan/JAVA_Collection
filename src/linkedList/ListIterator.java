@@ -38,10 +38,10 @@ public class ListIterator {
     }
 
     public void remove() {
-        if(nextIndex == 0) {
+        if (nextIndex == 0) {
             throw new IllegalStateException();
         }
-        linkedList.remove(nextIndex-1);
+        linkedList.remove(nextIndex - 1);
         nextIndex--;
     }
 }

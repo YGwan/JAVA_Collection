@@ -116,5 +116,4 @@ public class LinkedList {
     public ListIterator listIterator() {
         return new ListIterator(LinkedList.this);
     }
-
 }
