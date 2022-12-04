@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : LinkedList의 마지막 부분에 값을 추가하는 로직 구현">
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : LinkedList의 index에 따른 해당 부분 제거 로직 구현">
       <change beforePath="$PROJECT_DIR$/src/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/linkedList/LinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/linkedList/LinkedListMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670145104080</updated>
-      <workItem from="1670145193413" duration="1074000" />
+      <workItem from="1670145193413" duration="1429000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -88,7 +89,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670146221919</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat : LinkedList의 index에 따라서 그 부분에 값을 추가하는 로직 구현">
+      <created>1670146286157</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670146286157</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat : LinkedList 출력 부분 구현">
+      <created>1670146377143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670146377143</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat : LinkedList의 시작 부분 제거 로직 구현">
+      <created>1670146499206</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670146499206</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +131,10 @@
     <MESSAGE value="feat : LinkedList 구조 잡기, Node 구조 구현" />
     <MESSAGE value="feat : LinkedList의 시작부분에 값을 추가하는 로직 구현" />
     <MESSAGE value="feat : LinkedList의 마지막 부분에 값을 추가하는 로직 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : LinkedList의 마지막 부분에 값을 추가하는 로직 구현" />
+    <MESSAGE value="feat : LinkedList의 index에 따라서 그 부분에 값을 추가하는 로직 구현" />
+    <MESSAGE value="feat : LinkedList 출력 부분 구현" />
+    <MESSAGE value="feat : LinkedList의 시작 부분 제거 로직 구현" />
+    <MESSAGE value="feat : LinkedList의 index에 따른 해당 부분 제거 로직 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : LinkedList의 index에 따른 해당 부분 제거 로직 구현" />
   </component>
 </project>

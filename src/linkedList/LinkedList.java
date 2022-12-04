@@ -68,6 +68,20 @@ public class LinkedList {
         size--;
     }
 
+    public void remove(int index) {
+        if (index == 0) {
+            removeFirst();
+        }
+        Node previousNode = node(index - 1);
+        Node doDeletedNode = previousNode.next;
+        previousNode.next = previousNode.next.next;
+        if (doDeletedNode == tail) {
+            tail = previousNode;
+        }
+        size--;
+    }
+
+
     public String toString() {
         if (head == null) {
             return "[]";
