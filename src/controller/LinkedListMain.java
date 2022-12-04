@@ -13,7 +13,7 @@ public class LinkedListMain {
         System.out.println(numbers);
         numbers.remove(1);
         System.out.println(numbers);
-        numbers.removeLast();
+        numbers.remove();
         System.out.println(numbers);
     }
 }

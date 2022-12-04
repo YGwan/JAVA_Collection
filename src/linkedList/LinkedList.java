@@ -40,22 +40,14 @@ public class LinkedList {
         }
     }
 
-    private Node findNode(int index) {
-        Node node = head;
-        for (int order = 0; order < index; order++) {
-            node = node.next;
-        }
-        return node;
-    }
-
-    public void removeFirst() {
+    public void remove() {
         head = head.next;
         size--;
     }
 
     public void remove(int index) {
         if (index == 0) {
-            removeFirst();
+            remove();
         }
         Node previousNode = findNode(index - 1);
         Node doDeletedNode = previousNode.next;
@@ -68,6 +60,14 @@ public class LinkedList {
 
     public void removeLast() {
         remove(size - 1);
+    }
+
+    private Node findNode(int index) {
+        Node node = head;
+        for (int order = 0; order < index; order++) {
+            node = node.next;
+        }
+        return node;
     }
 
     public int size() {
