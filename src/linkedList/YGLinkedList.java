@@ -7,61 +7,44 @@ import java.util.function.Consumer;
 public class YGLinkedList<T> implements Iterable<T> {
 
     private Node<T> head;
-    private Node<T> tail;
     private int size = 0;
 
-    public void addFirst(T input) {
-        Node<T> newNode = new Node<T>(input);
-        newNode.next = head;
-        head = newNode;
-        addSize();
-        if (head.next == null) {
-            tail = head;
-        }
-    }
-
     public void add(int index, T input) {
+        Node<T> newNode = new Node<T>(input);
         if (index == 0) {
-            addFirst(input);
+            newNode.next = head;
+            head = newNode;
         } else {
             Node<T> previousNode = findNode(index - 1);
             Node<T> subsequentNode = previousNode.next;
-            Node<T> newNode = new Node<T>(input);
             previousNode.next = newNode;
             newNode.next = subsequentNode;
-            addSize();
         }
+        size++;
     }
 
     public void add(T input) {
         addFirst(input);
     }
 
+    public void addFirst(T input) {
+        add(0,input);
+    }
+
     public void addLast(T input) {
-        Node<T> newNode = new Node<T>(input);
-        if (size == 0) {
-            addFirst(input);
-        } else {
-            tail.next = newNode;
-            tail = newNode;
-            addSize();
-        }
+        add(size, input);
     }
 
     public void remove() {
-        head = head.next;
-        size--;
+        remove(0);
     }
 
     public void remove(int index) {
         if (index == 0) {
-            remove();
-        }
-        Node<T> previousNode = findNode(index - 1);
-        Node<T> doDeletedNode = previousNode.next;
-        previousNode.next = previousNode.next.next;
-        if (doDeletedNode == tail) {
-            tail = previousNode;
+            head = head.next;
+        } else {
+            Node<T> previousNode = findNode(index - 1);
+            previousNode.next = previousNode.next.next;
         }
         size--;
     }
@@ -70,16 +53,8 @@ public class YGLinkedList<T> implements Iterable<T> {
         remove(size - 1);
     }
 
-    public Node<T> getHeadNode() {
-        return head;
-    }
-
     public int size() {
         return size;
-    }
-
-    protected void addSize() {
-        size++;
     }
 
     public T get(int index) {
@@ -100,13 +75,13 @@ public class YGLinkedList<T> implements Iterable<T> {
             return "[]";
         }
         Node<T> node = head;
-        StringBuilder str = new StringBuilder("[");
+        StringBuilder linkedListResult = new StringBuilder("[");
 
         while (node.next != null) {
-            str.append(node.data).append(", ");
+            linkedListResult.append(node.data).append(", ");
             node = node.next;
         }
-        return str.append(node.data).append("]").toString();
+        return linkedListResult.append(node.data).append("]").toString();
     }
 
     private Node<T> findNode(int index) {
@@ -118,7 +93,7 @@ public class YGLinkedList<T> implements Iterable<T> {
     }
 
     public ListIterator listIterator() {
-        return new ListIterator<T>(YGLinkedList.this);
+        return new ListIterator<T>(YGLinkedList.this, head);
     }
 
     @Override
