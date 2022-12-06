@@ -67,6 +67,13 @@ public class YGLinkedList<T> implements Iterable<T> {
         return size;
     }
 
+    public boolean contains(T input) {
+        for(int index = 0; index < size; index++) {
+            if(get(index).equals(input)) return true;
+        }
+        return false;
+    }
+
     public T get(int index) {
         return findNode(index).data();
     }
