@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="refactor : 코드 전제 리팩토링">
-      <change afterPath="$PROJECT_DIR$/src/test/java/LinkedList/List_Creation.java" afterDir="false" />
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : LinkedList reverse 구현">
+      <change afterPath="$PROJECT_DIR$/src/test/java/LinkedList/Iterator_Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/LinkedList/List_Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LinkedListMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/ListIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +28,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -89,18 +92,96 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="LinkedList" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="LinkedListMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LinkedListMain" />
-      <module name="List.main" />
+  <component name="RunManager" selected="JUnit.List_Test">
+    <configuration name="Iterator_Test$useServiceYGLI.allRemoveNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LinkedList.Iterator_Test" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.Iterator_Test$useServiceYGLI" />
+      <option name="METHOD_NAME" value="allRemoveNumbers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Iterator_Test$useServiceYGLI.useRemoveCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LinkedList.Iterator_Test" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.Iterator_Test$useServiceYGLI" />
+      <option name="METHOD_NAME" value="useRemoveCorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Iterator_Test$useServiceYGLI.useRemoveCreateError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LinkedList.Iterator_Test" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.Iterator_Test$useServiceYGLI" />
+      <option name="METHOD_NAME" value="useRemoveCreateError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Iterator_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LinkedList" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.Iterator_Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="List_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LinkedList" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.List_Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LinkedListMain" />
+        <item itemvalue="JUnit.List_Test" />
+        <item itemvalue="JUnit.Iterator_Test" />
+        <item itemvalue="JUnit.Iterator_Test$useServiceYGLI.allRemoveNumbers" />
+        <item itemvalue="JUnit.Iterator_Test$useServiceYGLI.useRemoveCorrect" />
+        <item itemvalue="JUnit.Iterator_Test$useServiceYGLI.useRemoveCreateError" />
       </list>
     </recent_temporary>
   </component>
@@ -115,7 +196,7 @@
       <workItem from="1670145193413" duration="5231000" />
       <workItem from="1670175413027" duration="7174000" />
       <workItem from="1670253825686" duration="973000" />
-      <workItem from="1670256146919" duration="8652000" />
+      <workItem from="1670256146919" duration="17084000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -264,7 +345,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670228062503</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactor : Node의 필드 캡슐화 처리">
+      <created>1670305935271</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670305935271</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat : LinkedList contains 구현">
+      <created>1670305967025</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670305967025</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat : LinkedList reverse 구현">
+      <created>1670305992111</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670305992111</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +385,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat : LinkedList 구조 잡기, Node 구조 구현" />
     <MESSAGE value="feat : LinkedList의 시작부분에 값을 추가하는 로직 구현" />
     <MESSAGE value="feat : LinkedList의 마지막 부분에 값을 추가하는 로직 구현" />
     <MESSAGE value="feat : LinkedList의 index에 따라서 그 부분에 값을 추가하는 로직 구현" />
@@ -306,6 +407,9 @@
     <MESSAGE value="fix : addFirst() 메서드로 메서드명 변경, add로직 추가" />
     <MESSAGE value="feat : Generic 추가" />
     <MESSAGE value="refactor : 코드 전제 리팩토링" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor : 코드 전제 리팩토링" />
+    <MESSAGE value="refactor : Node의 필드 캡슐화 처리" />
+    <MESSAGE value="feat : LinkedList contains 구현" />
+    <MESSAGE value="feat : LinkedList reverse 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : LinkedList reverse 구현" />
   </component>
 </project>

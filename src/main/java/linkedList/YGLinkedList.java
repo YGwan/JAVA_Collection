@@ -124,7 +124,7 @@ public class YGLinkedList<T> implements Iterable<T> {
         return node;
     }
 
-    public ListIterator listIterator() {
+    public ListIterator<T> listIterator() {
         return new ListIterator<T>(YGLinkedList.this, head);
     }
 
