@@ -7,6 +7,9 @@ import java.util.function.Consumer;
 
 public class YGLinkedList<T> implements Iterable<T> {
 
+    private Node<T> head;
+    private int size = 0;
+
     public YGLinkedList() {
     }
 
@@ -16,11 +19,8 @@ public class YGLinkedList<T> implements Iterable<T> {
         }
     }
 
-    private Node<T> head;
-    private int size = 0;
-
     public void add(int index, T input) {
-        Node<T> newNode = new Node<T>(input);
+        Node<T> newNode = new Node<>(input);
         if (index == 0) {
             newNode.updateNext(head);
             head = newNode;
@@ -125,7 +125,7 @@ public class YGLinkedList<T> implements Iterable<T> {
     }
 
     public ListIterator<T> listIterator() {
-        return new ListIterator<T>(YGLinkedList.this, head);
+        return new ListIterator<>(YGLinkedList.this, head);
     }
 
     @Override
