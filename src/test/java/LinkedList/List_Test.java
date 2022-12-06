@@ -1,12 +1,15 @@
 package LinkedList;
 
 import linkedList.YGLinkedList;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class List_Test {
@@ -124,6 +127,40 @@ public class List_Test {
         public void useIndexOf() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
             assertThat(numbers.indexOf(3)).isEqualTo(2);
+        }
+    }
+
+    @DisplayName("출력이 제대로 잘 되는지 확인한다.")
+    @Nested
+    class CheckPrint {
+        private PrintStream standardOut;
+        private OutputStream captor;
+
+        @BeforeEach
+        protected final void init() {
+            standardOut = System.out;
+            captor = new ByteArrayOutputStream();
+            System.setOut(new PrintStream(captor));
+        }
+
+        @AfterEach
+        protected final void printOutput() {
+            System.setOut(standardOut);
+            System.out.println(output());
+        }
+
+        protected final String output() {
+            return captor.toString().trim();
+        }
+
+        @DisplayName("foreach를 사용해서 값을 조회해본다.")
+        @Test
+        public void useForeach() {
+            YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
+            for(Integer number : numbers) {
+                System.out.println(number);
+            }
+            assertEquals("1\n2\n3\n4\n5", output());
         }
     }
 }
