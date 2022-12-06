@@ -74,6 +74,21 @@ public class YGLinkedList<T> implements Iterable<T> {
         return false;
     }
 
+    public void reverse() {
+        YGLinkedList<T> currentNumbers = new YGLinkedList<>();
+        for(T input : this) {
+            currentNumbers.add(input);
+        }
+        int initialSize = this.size;
+
+        for(int index = 0; index < initialSize; index++) {
+            remove();
+        }
+        for(int index = 0; index < initialSize; index++) {
+            addFirst(currentNumbers.get(index));
+        }
+    }
+
     public T get(int index) {
         return findNode(index).data();
     }
