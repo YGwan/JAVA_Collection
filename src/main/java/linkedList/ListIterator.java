@@ -15,9 +15,9 @@ public class ListIterator<T> implements Iterator<T> {
 
     public T next() {
         Node<T> previousNode = next;
-        next = previousNode.next;
+        next = previousNode.next();
         nextIndex++;
-        return previousNode.data;
+        return previousNode.data();
     }
 
     public boolean hasNext() {

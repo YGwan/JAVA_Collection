@@ -1,10 +1,20 @@
 package linkedList;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
 public class YGLinkedList<T> implements Iterable<T> {
+
+    public YGLinkedList() {
+    }
+
+    public YGLinkedList(Collection<? extends T> c) {
+        for (T t : c) {
+            add(t);
+        }
+    }
 
     private Node<T> head;
     private int size = 0;
@@ -12,19 +22,19 @@ public class YGLinkedList<T> implements Iterable<T> {
     public void add(int index, T input) {
         Node<T> newNode = new Node<T>(input);
         if (index == 0) {
-            newNode.next = head;
+            newNode.updateNext(head);
             head = newNode;
         } else {
             Node<T> previousNode = findNode(index - 1);
-            Node<T> subsequentNode = previousNode.next;
-            previousNode.next = newNode;
-            newNode.next = subsequentNode;
+            Node<T> subsequentNode = previousNode.next();
+            previousNode.updateNext(newNode);
+            newNode.updateNext(subsequentNode);
         }
         size++;
     }
 
     public void add(T input) {
-        addFirst(input);
+        addLast(input);
     }
 
     public void addFirst(T input) {
@@ -41,10 +51,10 @@ public class YGLinkedList<T> implements Iterable<T> {
 
     public void remove(int index) {
         if (index == 0) {
-            head = head.next;
+            head = head.next();
         } else {
             Node<T> previousNode = findNode(index - 1);
-            previousNode.next = previousNode.next.next;
+            previousNode.updateNext(previousNode.next().next());
         }
         size--;
     }
@@ -58,12 +68,12 @@ public class YGLinkedList<T> implements Iterable<T> {
     }
 
     public T get(int index) {
-        return findNode(index).data;
+        return findNode(index).data();
     }
 
     public int indexOf(T data) {
         for (int index = 0; index < size; index++) {
-            if (findNode(index).data == data) {
+            if (findNode(index).data() == data) {
                 return index;
             }
         }
@@ -77,17 +87,17 @@ public class YGLinkedList<T> implements Iterable<T> {
         Node<T> node = head;
         StringBuilder linkedListResult = new StringBuilder("[");
 
-        while (node.next != null) {
-            linkedListResult.append(node.data).append(", ");
-            node = node.next;
+        while (node.next() != null) {
+            linkedListResult.append(node.data()).append(", ");
+            node = node.next();
         }
-        return linkedListResult.append(node.data).append("]").toString();
+        return linkedListResult.append(node.data()).append("]").toString();
     }
 
     private Node<T> findNode(int index) {
         Node<T> node = head;
         for (int order = 0; order < index; order++) {
-            node = node.next;
+            node = node.next();
         }
         return node;
     }
