@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.Invalidator;
+
 import java.util.Iterator;
 
 public class ListIterator<T> implements Iterator<T> {
@@ -25,9 +27,7 @@ public class ListIterator<T> implements Iterator<T> {
     }
 
     public void remove() {
-        if (nextIndex == 0) {
-            throw new IllegalStateException();
-        }
+        Invalidator.iteratorRemoveNextIndexZero(nextIndex);
         ygLinkedList.remove(nextIndex - 1);
         nextIndex--;
     }
