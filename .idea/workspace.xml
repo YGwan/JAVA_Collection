@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="test : foreach 관련 test 코드 작성">
-      <change beforePath="$PROJECT_DIR$/src/main/java/LinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LinkedListMain.java" afterDir="false" />
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="refactor : LinkedList 관련 최종 리팩토링">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/Iterator_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/IteratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/List_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/ListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +94,8 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.List_Test$CheckPrint.useForeach">
-    <configuration name="Iterator_Test$useServiceYGLI.allRemoveNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.IteratorTest">
+    <configuration name="IteratorTest$UseServiceYGLinkedList.allRemoveNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="List.test" />
       <extension name="coverage">
         <pattern>
@@ -97,31 +103,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="LinkedList.Iterator_Test" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.Iterator_Test$useServiceYGLI" />
+      <option name="PACKAGE_NAME" value="LinkedList.IteratorTest" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.IteratorTest$UseServiceYGLinkedList" />
       <option name="METHOD_NAME" value="allRemoveNumbers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Iterator_Test$useServiceYGLI.useRemoveCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="List.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="LinkedList.Iterator_Test" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.Iterator_Test$useServiceYGLI" />
-      <option name="METHOD_NAME" value="useRemoveCorrect" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Iterator_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="List.test" />
       <extension name="coverage">
         <pattern>
@@ -130,13 +120,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="LinkedList" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.Iterator_Test" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.IteratorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="List_Test$CheckPrint.useForeach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ListTest$CheckPrint.useForeach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="List.test" />
       <extension name="coverage">
         <pattern>
@@ -144,15 +134,31 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="LinkedList.List_Test" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.List_Test$CheckPrint" />
+      <option name="PACKAGE_NAME" value="LinkedList.ListTest" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.ListTest$CheckPrint" />
       <option name="METHOD_NAME" value="useForeach" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="List_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ListTest$useServiceYGL.useIndexOf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LinkedList.ListTest" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.ListTest$useServiceYGL" />
+      <option name="METHOD_NAME" value="useIndexOf" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="List.test" />
       <extension name="coverage">
         <pattern>
@@ -161,7 +167,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="LinkedList" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.List_Test" />
+      <option name="MAIN_CLASS_NAME" value="LinkedList.ListTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.List_Test$CheckPrint.useForeach" />
-        <item itemvalue="JUnit.List_Test" />
-        <item itemvalue="JUnit.Iterator_Test" />
-        <item itemvalue="JUnit.Iterator_Test$useServiceYGLI.allRemoveNumbers" />
-        <item itemvalue="JUnit.Iterator_Test$useServiceYGLI.useRemoveCorrect" />
+        <item itemvalue="JUnit.IteratorTest" />
+        <item itemvalue="JUnit.ListTest" />
+        <item itemvalue="JUnit.ListTest$useServiceYGL.useIndexOf" />
+        <item itemvalue="JUnit.ListTest$CheckPrint.useForeach" />
+        <item itemvalue="JUnit.IteratorTest$UseServiceYGLinkedList.allRemoveNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +194,7 @@
       <workItem from="1670145193413" duration="5231000" />
       <workItem from="1670175413027" duration="7174000" />
       <workItem from="1670253825686" duration="973000" />
-      <workItem from="1670256146919" duration="19362000" />
+      <workItem from="1670256146919" duration="22856000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -372,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670342784917</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="refactor : LinkedList 관련 최종 리팩토링">
+      <created>1670343139349</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670343139349</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +404,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat : LinkedList의 index에 따라서 그 부분에 값을 추가하는 로직 구현" />
     <MESSAGE value="feat : LinkedList 출력 부분 구현" />
     <MESSAGE value="feat : LinkedList의 시작 부분 제거 로직 구현" />
     <MESSAGE value="feat : LinkedList의 index에 따른 해당 부분 제거 로직 구현" />
@@ -416,6 +428,7 @@
     <MESSAGE value="feat : LinkedList reverse 구현" />
     <MESSAGE value="test : test 코드 작성(list, listIterator관련 내용)" />
     <MESSAGE value="test : foreach 관련 test 코드 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="test : foreach 관련 test 코드 작성" />
+    <MESSAGE value="refactor : LinkedList 관련 최종 리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor : LinkedList 관련 최종 리팩토링" />
   </component>
 </project>

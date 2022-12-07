@@ -95,7 +95,7 @@ public class YGLinkedList<T> implements Iterable<T> {
 
     public int indexOf(T data) {
         for (int index = 0; index < size; index++) {
-            if (findNode(index).data() == data) {
+            if (findNode(index).isSameData(data)) {
                 return index;
             }
         }

@@ -10,39 +10,36 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
-public class Iterator_Test {
+public class IteratorTest {
 
-    List<Integer> originalNumbers = List.of(1, 2, 3, 4, 5);
-    YGLinkedList<Integer> numbers;
-    private ListIterator<Integer> listIterator;
+    private final YGLinkedList<Integer> numbers = new YGLinkedList<>(List.of(1, 2, 3, 4, 5));
 
     @DisplayName("YGLinkedList에 해당하는 ListIterator을 생성한다.")
     @Test
-    public void createYGLI() {
-        this.numbers = new YGLinkedList<>(originalNumbers);
-        this.listIterator = numbers.listIterator();
+    public void createYGLinkedList() {
+        ListIterator<Integer> listIterator = numbers.listIterator();
         assertThat(listIterator).isExactlyInstanceOf(ListIterator.class);
     }
 
-    @DisplayName("ListIterator의 메서드를 이용해본다..")
+    @DisplayName("ListIterator의 메서드를 사용한다.")
     @Nested
-    class useServiceYGLI {
+    class UseServiceYGLinkedList {
 
-        private final int size = originalNumbers.size();
+        private final int size = numbers.size();
 
-        @DisplayName("next가 잘 동작하는지 확인해본다.")
+        @DisplayName("next 메서드를 사용해 numbers 값을 가져오는 작업이 잘 수행되는지 확인한다.")
         @Test
         public void useNext() {
-            createYGLI();
+            ListIterator<Integer> listIterator = numbers.listIterator();
             for (int value = 1; value <= size; value++) {
                 assertThat(listIterator.next()).isEqualTo(value);
             }
         }
 
-        @DisplayName("hasNext가 잘 동작하는지 확인해본다.")
+        @DisplayName("hasNext가 값이 있을 경우 true를 리턴하고 값이 없을경우 false를 리턴하는지 확인한다.")
         @Test
         public void useHasNext() {
-            createYGLI();
+            ListIterator<Integer> listIterator = numbers.listIterator();
             for (int order = 0; order < size; order++) {
                 assertThat(listIterator.hasNext()).isTrue();
                 listIterator.next();
@@ -50,27 +47,27 @@ public class Iterator_Test {
             assertThat(listIterator.hasNext()).isFalse();
         }
 
-        @DisplayName("nextIndex가 0일 경우 에러가 잘 발생하는지 확인해본다.")
+        @DisplayName("nextIndex가 0일 경우 IllegalStateException 에러를 발생시키는지 확인한다.")
         @Test
         public void useRemoveCreateError() {
-            createYGLI();
-            assertThatThrownBy(() -> listIterator.remove())
+            ListIterator<Integer> listIterator = numbers.listIterator();
+            assertThatThrownBy(listIterator::remove)
                     .isInstanceOf(IllegalStateException.class);
         }
 
-        @DisplayName("nextIndex가 0이 아닐 경우 잘 제거되는지 확인해본다.")
+        @DisplayName("nextIndex가 0이 아닐 경우 listIterator의 remove함수가 nextIndex의 전 index의 요소를 잘 제거하는지 확인한다.")
         @Test
         public void useRemoveCorrect() {
-            createYGLI();
+            ListIterator<Integer> listIterator = numbers.listIterator();
             listIterator.next();
             listIterator.remove();
             assertThat(numbers).containsExactly(2, 3, 4, 5);
         }
 
-        @DisplayName("hasNext, next, remove를 사용해서 전체를 삭제한다.")
+        @DisplayName("hasNext, next, remove를 사용해서 전체를 삭제하고 해당 작업이 잘 진행되는지 확인한다.")
         @Test
         public void allRemoveNumbers() {
-            createYGLI();
+            ListIterator<Integer> listIterator = numbers.listIterator();
             while (listIterator.hasNext()) {
                 listIterator.next();
                 listIterator.remove();

@@ -5,20 +5,24 @@ class Node<T> {
     private final T data;
     private Node<T> next;
 
-    public Node(T input) {
+    protected Node(T input) {
         this.data = input;
         this.next = null;
     }
 
-    public Node<T> next() {
+    protected Node<T> next() {
         return next;
     }
 
-    public void updateNext(Node<T> next) {
+    protected void updateNext(Node<T> next) {
         this.next = next;
     }
 
-    public T data() {
+    protected boolean isSameData(T data) {
+        return data().equals(data);
+    }
+
+    protected T data() {
         return data;
     }
 }
