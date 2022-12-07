@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="refactor : LinkedList 관련 최종 리팩토링">
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="refactor : Test코드 전체 리팩토링">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ArrayList/YGArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/Iterator_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/IteratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/List_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/ListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LinkedListMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,22 +62,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-11",
-    "last_opened_file_path": "/Users/yonggwan/GitHub/JAVA_Collection/List",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yonggwan/GitHub/JAVA_Collection/List&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="linkedList" />
@@ -94,19 +92,10 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IteratorTest">
-    <configuration name="IteratorTest$UseServiceYGLinkedList.allRemoveNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="List.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="LinkedList.IteratorTest" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.IteratorTest$UseServiceYGLinkedList" />
-      <option name="METHOD_NAME" value="allRemoveNumbers" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="List.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.IteratorTest" />
         <item itemvalue="JUnit.ListTest" />
         <item itemvalue="JUnit.ListTest$useServiceYGL.useIndexOf" />
         <item itemvalue="JUnit.ListTest$CheckPrint.useForeach" />
-        <item itemvalue="JUnit.IteratorTest$UseServiceYGLinkedList.allRemoveNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +183,7 @@
       <workItem from="1670145193413" duration="5231000" />
       <workItem from="1670175413027" duration="7174000" />
       <workItem from="1670253825686" duration="973000" />
-      <workItem from="1670256146919" duration="22856000" />
+      <workItem from="1670256146919" duration="27816000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -385,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670343139349</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="refactor : Test코드 전체 리팩토링">
+      <created>1670395051739</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670395051739</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +400,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat : LinkedList 출력 부분 구현" />
     <MESSAGE value="feat : LinkedList의 시작 부분 제거 로직 구현" />
     <MESSAGE value="feat : LinkedList의 index에 따른 해당 부분 제거 로직 구현" />
     <MESSAGE value="feat : LinkedList의 마지막 부분 제거 로직 구현" />
@@ -428,7 +423,8 @@
     <MESSAGE value="feat : LinkedList reverse 구현" />
     <MESSAGE value="test : test 코드 작성(list, listIterator관련 내용)" />
     <MESSAGE value="test : foreach 관련 test 코드 작성" />
-    <MESSAGE value="refactor : LinkedList 관련 최종 리팩토링" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor : LinkedList 관련 최종 리팩토링" />
+    <MESSAGE value="refactor : LinkedList 전체 코드 리팩토링" />
+    <MESSAGE value="refactor : Test코드 전체 리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor : Test코드 전체 리팩토링" />
   </component>
 </project>
