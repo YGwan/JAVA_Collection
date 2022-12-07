@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : add method 구현, 초기 크기를 벗어날 경우 자동으로 크기 확장 로직 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : 에러 처리를 위한 inValidator class 구현">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArrayList/Invalidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Invalidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArrayList/YGArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArrayList/YGArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/ListIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/IteratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/IteratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/ListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/ListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,7 @@
       <workItem from="1670175413027" duration="7174000" />
       <workItem from="1670253825686" duration="973000" />
       <workItem from="1670256146919" duration="31705000" />
-      <workItem from="1670424764008" duration="3312000" />
+      <workItem from="1670424764008" duration="4534000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -398,7 +396,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670410177318</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="refactor : test코드 전체 리팩토링">
+      <created>1670433642573</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670433642573</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat : 에러 처리를 위한 inValidator class 구현">
+      <created>1670433702118</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670433702118</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,8 +429,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat : LinkedList의 마지막 부분 제거 로직 구현" />
-    <MESSAGE value="feat : LinkedList의 size, get, indexOf 메서드 구현" />
     <MESSAGE value="feat : LinkedList의 ListIterator 구조 구현" />
     <MESSAGE value="feat : ListIterator의 next 메서드 구현" />
     <MESSAGE value="feat : ListIterator의 hasNext 메서드 구현" />
@@ -442,6 +452,8 @@
     <MESSAGE value="refactor : Test코드 전체 리팩토링" />
     <MESSAGE value="feat : YGArrayList 기본 구조 구현 및 생성자 구현" />
     <MESSAGE value="feat : add method 구현, 초기 크기를 벗어날 경우 자동으로 크기 확장 로직 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : add method 구현, 초기 크기를 벗어날 경우 자동으로 크기 확장 로직 구현" />
+    <MESSAGE value="refactor : test코드 전체 리팩토링" />
+    <MESSAGE value="feat : 에러 처리를 위한 inValidator class 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : 에러 처리를 위한 inValidator class 구현" />
   </component>
 </project>

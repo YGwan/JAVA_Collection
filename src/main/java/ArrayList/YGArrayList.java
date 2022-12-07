@@ -41,6 +41,10 @@ public class YGArrayList {
         size++;
     }
 
+    public void add(Object element) {
+        add(size, element);
+    }
+
     private void resizeCapacity(int capacity) {
         growUpCapacity(calculateCapacity(elementData, capacity));
     }
@@ -67,6 +71,21 @@ public class YGArrayList {
     private void fastAdd(int index) {
         for (int order = size; order > index; order--) {
             elementData[order] = elementData[order - 1];
+        }
+    }
+
+    public String toString() {
+        StringBuilder ygArrayListResult = new StringBuilder("[");
+        for(int index = 0; index < size; index++) {
+            printElementData(ygArrayListResult, index);
+        }
+        return ygArrayListResult.append("]").toString();
+    }
+
+    private void printElementData(StringBuilder ygArrayListResult, int index) {
+        ygArrayListResult.append(elementData[index]);
+        if(index < size - 1) {
+            ygArrayListResult.append(", ");
         }
     }
 }
