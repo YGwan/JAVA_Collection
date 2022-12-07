@@ -86,28 +86,28 @@ public class ListTest {
     @DisplayName("YGLinkedList의 정보를 반환한다.")
     @Nested
     class UseServiceYGLinkedList {
-        @DisplayName("해당 리스트의 크기 값을 확인한다.")
+        @DisplayName("해당 리스트의 크기를 반환한다.")
         @Test
         public void useSize() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
             assertThat(numbers.size()).isEqualTo(5);
         }
 
-        @DisplayName("numbers 리스트에 값이 있을 경우 True를 반환하는지 확인한다.")
+        @DisplayName("numbers 리스트에 값이 있을 경우 True를 반환한다.")
         @Test
         public void useContainsTrueStatus() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
             assertThat(numbers.contains(1)).isTrue();
         }
 
-        @DisplayName("numbers 리스트에 값이 없을 경우 False 반환하는지 한다.")
+        @DisplayName("numbers 리스트에 값이 없을 경우 False 반환한다.")
         @Test
         public void useContainsFalseStatus() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
             assertThat(numbers.contains(7)).isFalse();
         }
 
-        @DisplayName("numbers 리스트의 역순으로 잘 변환하는지 확인한다.")
+        @DisplayName("numbers 리스트를 역순으로 변환한다.")
         @Test
         public void useReverse() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
@@ -122,7 +122,7 @@ public class ListTest {
             assertThat(numbers.get(1)).isEqualTo(2);
         }
 
-        @DisplayName("지정한 인덱스에 해당하는 값이 잘 반환되는지 확인한다.")
+        @DisplayName("인덱스에 해당하는 값을 반환한다.")
         @Test
         public void useIndexOf() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);

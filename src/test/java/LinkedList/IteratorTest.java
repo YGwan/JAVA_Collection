@@ -27,7 +27,7 @@ public class IteratorTest {
 
         private final int size = numbers.size();
 
-        @DisplayName("next 메서드를 사용해 numbers 값을 가져오는 작업이 잘 수행되는지 확인한다.")
+        @DisplayName("next 메서드를 사용해 numbers 값을 가져온다.")
         @Test
         public void useNext() {
             ListIterator<Integer> listIterator = numbers.listIterator();
@@ -55,7 +55,7 @@ public class IteratorTest {
                     .isInstanceOf(IllegalStateException.class);
         }
 
-        @DisplayName("nextIndex가 0이 아닐 경우 listIterator의 remove함수가 nextIndex의 전 index의 요소를 잘 제거하는지 확인한다.")
+        @DisplayName("nextIndex가 0이 아닐 경우 listIterator의 remove함수가 nextIndex의 전 index의 요소를 제거한다.")
         @Test
         public void useRemoveCorrect() {
             ListIterator<Integer> listIterator = numbers.listIterator();
@@ -64,7 +64,7 @@ public class IteratorTest {
             assertThat(numbers).containsExactly(2, 3, 4, 5);
         }
 
-        @DisplayName("hasNext, next, remove를 사용해서 전체를 삭제하고 해당 작업이 잘 진행되는지 확인한다.")
+        @DisplayName("hasNext, next, remove를 사용해서 전체를 삭제한다.")
         @Test
         public void allRemoveNumbers() {
             ListIterator<Integer> listIterator = numbers.listIterator();
