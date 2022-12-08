@@ -51,12 +51,22 @@ public class YGArrayList {
     }
 
     public void remove(Object inputValue) {
-        if(inputValue == null) {
-            removeIfSameInputValue();
+        removeIfSameInputValue(inputValue);
+    }
+
+    public void removeFirst() {
+        remove(0);
+    }
+
+    public void removeLast() {
+        remove(size-1);
+    }
+
+    public void clear() {
+        for(int index = 0; index < size; index++) {
+            elementData[index] = null;
         }
-        else {
-            removeIfSameInputValue(inputValue);
-        }
+        size = 0;
     }
 
     private void removeIfSameInputValue(Object inputValue) {
@@ -67,25 +77,12 @@ public class YGArrayList {
         }
     }
 
-    private void removeIfSameInputValue() {
-        removeIfSameInputValue(null);
-    }
-
     private void fastRemove(int index) {
         for(int order = index + 1; order < size; order++) {
             elementData[order-1] = elementData[order];
         }
         size--;
         elementData[size] = null;
-    }
-
-
-    public void removeFirst() {
-        remove(0);
-    }
-
-    public void removeLast() {
-        remove(size-1);
     }
 
     private void resizeCapacity(int capacity) {

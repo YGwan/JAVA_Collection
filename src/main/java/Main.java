@@ -1,6 +1,7 @@
 import ArrayList.YGArrayList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -14,6 +15,8 @@ public class Main {
         numbers.add(20);
         System.out.println(numbers);
         numbers.add(" ");
+        System.out.println(numbers);
+        numbers.clear();
         System.out.println(numbers);
     }
 }
