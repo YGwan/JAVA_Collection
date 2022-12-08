@@ -7,7 +7,7 @@ public class YGArrayList {
 
     private static final int DEFAULT_CAPACITY = 10;
     private static final Object[] EMPTY_ELEMENTDATA = {};
-    public Object[] elementData;
+    private Object[] elementData;
     private int size = 0;
 
     public YGArrayList() {
@@ -46,7 +46,7 @@ public class YGArrayList {
     }
 
     public void remove(int index) {
-        Invalidator.outOfIndexRangeRemove(index,size);
+        Invalidator.outOfIndexRange(index,size);
         fastRemove(index);
     }
 
@@ -60,6 +60,24 @@ public class YGArrayList {
 
     public void removeLast() {
         remove(size-1);
+    }
+
+    public Object get(int index) {
+        Invalidator.outOfIndexRange(index,size);
+        return elementData[index];
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public int indexOf(Object value) {
+        for (int index = 0; index < size; index++) {
+            if (elementData[index] == value) {
+                return index;
+            }
+        }
+        return -1;
     }
 
     public void clear() {

@@ -1,7 +1,7 @@
 import ArrayList.YGArrayList;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.ListIterator;
 
 public class Main {
 
@@ -12,11 +12,8 @@ public class Main {
         numbers.addLast(10);
         numbers.add(1, 15);
         numbers.add(3,15);
-        numbers.add(20);
+        numbers.add(null);
         System.out.println(numbers);
-        numbers.add(" ");
-        System.out.println(numbers);
-        numbers.clear();
-        System.out.println(numbers);
+        ArrayList<Integer> a = new ArrayList<>();
     }
 }

@@ -53,7 +53,7 @@ public class YGLinkedList<T> implements Iterable<T> {
     }
 
     public void remove(int index) {
-        Invalidator.outOfIndexRangeRemove(index,size);
+        Invalidator.outOfIndexRange(index,size);
         if (index == 0) {
             head = head.next();
         } else {

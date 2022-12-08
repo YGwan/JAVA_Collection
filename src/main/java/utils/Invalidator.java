@@ -16,7 +16,7 @@ public class Invalidator {
         }
     }
 
-    public static void outOfIndexRangeRemove(int index, int size) {
+    public static void outOfIndexRange(int index, int size) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException(index + outOfIndexErrorMessage);
         }

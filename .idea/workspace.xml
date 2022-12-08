@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : remove 메서드 구현">
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : clear 메서드 구현">
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArrayList/YGArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArrayList/YGArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Invalidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Invalidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +186,7 @@
       <workItem from="1670175413027" duration="7174000" />
       <workItem from="1670253825686" duration="973000" />
       <workItem from="1670256146919" duration="31705000" />
-      <workItem from="1670424764008" duration="9631000" />
+      <workItem from="1670424764008" duration="15899000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -424,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670484323484</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="feat : clear 메서드 구현">
+      <created>1670486987626</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670486987626</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +452,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat : ListIterator의 hasNext 메서드 구현" />
     <MESSAGE value="feat : ListIterator의 add 메서드 구현" />
     <MESSAGE value="feat : ListIterator의 remove 메서드 구현" />
     <MESSAGE value="rename : 구현후 실행부 분리" />
@@ -468,6 +476,7 @@
     <MESSAGE value="feat : 에러 처리를 위한 inValidator class 구현" />
     <MESSAGE value="feat : 해당 YGArrayList의 결과값 확인을 위한 toString 메서드 구현" />
     <MESSAGE value="feat : remove 메서드 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : remove 메서드 구현" />
+    <MESSAGE value="feat : clear 메서드 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : clear 메서드 구현" />
   </component>
 </project>
