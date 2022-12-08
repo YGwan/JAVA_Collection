@@ -1,5 +1,7 @@
 package linkedList;
 
+import utils.Invalidator;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Spliterator;
@@ -20,6 +22,7 @@ public class YGLinkedList<T> implements Iterable<T> {
     }
 
     public void add(int index, T input) {
+        Invalidator.outOfIndexRangeAdd(index,size);
         Node<T> newNode = new Node<>(input);
         if (index == 0) {
             newNode.updateNext(head);
@@ -50,6 +53,7 @@ public class YGLinkedList<T> implements Iterable<T> {
     }
 
     public void remove(int index) {
+        Invalidator.outOfIndexRangeRemove(index,size);
         if (index == 0) {
             head = head.next();
         } else {

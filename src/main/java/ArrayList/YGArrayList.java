@@ -34,7 +34,7 @@ public class YGArrayList {
     }
 
     public void add(int index, Object element) {
-        Invalidator.outOfIndexRange(index, size);
+        Invalidator.outOfIndexRangeAdd(index, size);
         resizeCapacity(size + 1);
         fastAdd(index);
         elementData[index] = element;
@@ -43,6 +43,49 @@ public class YGArrayList {
 
     public void add(Object element) {
         add(size, element);
+    }
+
+    public void remove(int index) {
+        Invalidator.outOfIndexRangeRemove(index,size);
+        fastRemove(index);
+    }
+
+    public void remove(Object inputValue) {
+        if(inputValue == null) {
+            removeIfSameInputValue();
+        }
+        else {
+            removeIfSameInputValue(inputValue);
+        }
+    }
+
+    private void removeIfSameInputValue(Object inputValue) {
+        for(int index = 0; index < size; index++) {
+            if(elementData[index] == inputValue) {
+                fastRemove(index);
+            }
+        }
+    }
+
+    private void removeIfSameInputValue() {
+        removeIfSameInputValue(null);
+    }
+
+    private void fastRemove(int index) {
+        for(int order = index + 1; order < size; order++) {
+            elementData[order-1] = elementData[order];
+        }
+        size--;
+        elementData[size] = null;
+    }
+
+
+    public void removeFirst() {
+        remove(0);
+    }
+
+    public void removeLast() {
+        remove(size-1);
     }
 
     private void resizeCapacity(int capacity) {

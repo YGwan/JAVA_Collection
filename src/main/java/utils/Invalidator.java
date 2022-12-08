@@ -10,8 +10,14 @@ public class Invalidator {
         throw new IllegalStateException(initialCapacity + notAppreciateErrorMessage);
     }
 
-    public static void outOfIndexRange(int index, int size) {
+    public static void outOfIndexRangeAdd(int index, int size) {
         if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(index + outOfIndexErrorMessage);
+        }
+    }
+
+    public static void outOfIndexRangeRemove(int index, int size) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException(index + outOfIndexErrorMessage);
         }
     }
