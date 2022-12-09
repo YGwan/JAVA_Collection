@@ -1,9 +1,8 @@
-package ArrayList;
+package dataStructure.arrayList;
 
 import utils.Invalidator;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Spliterator;
+
+import java.util.*;
 import java.util.function.Consumer;
 
 public class YGArrayList<T> implements Iterable<T> {
@@ -81,6 +80,15 @@ public class YGArrayList<T> implements Iterable<T> {
             }
         }
         return -1;
+    }
+
+    public void reverse() {
+        Object[] reverseElement = new Object[size];
+        for(int index = 0; index < size; index++) {
+            reverseElement[index] = elementData[size - index - 1];
+        }
+
+        System.arraycopy(reverseElement, 0, elementData, 0, size);
     }
 
     public void clear() {
