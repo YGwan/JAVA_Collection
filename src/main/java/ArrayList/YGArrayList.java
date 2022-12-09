@@ -163,5 +163,14 @@ public class YGArrayList {
         public boolean hasNext() {
             return nextIndex < size;
         }
+
+        public Object previous() {
+            Invalidator.previousMethodOutOfRange(nextIndex, size);
+            return elementData[--nextIndex];
+        }
+
+        public boolean hasPrevious() {
+            return nextIndex > 0;
+        }
     }
 }

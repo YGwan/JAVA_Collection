@@ -35,4 +35,11 @@ public class Invalidator {
             throw new NoSuchElementException(iteratorRemoveErrorMessage);
         }
     }
+
+    public static void previousMethodOutOfRange(int nextIndex, int size) {
+        int previousIndex = nextIndex - 1;
+        if(previousIndex < 0) {
+            throw new NoSuchElementException(iteratorRemoveErrorMessage);
+        }
+    }
 }

@@ -1,5 +1,7 @@
 import ArrayList.YGArrayList;
 
+import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class Main {
 
@@ -15,5 +17,13 @@ public class Main {
         while(li.hasNext()) {
             System.out.println(li.next());
         }
+        System.out.println(li.previous());
+        System.out.println(li.previous());
+        System.out.println(li.previous());
+        System.out.println(li.previous());
+
+        ArrayList<Integer> a = new ArrayList<>();
+        ListIterator<Integer> k = a.listIterator();
+        k.remove();
     }
 }
