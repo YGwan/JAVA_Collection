@@ -12,10 +12,11 @@ public class ListIterator<T> implements Iterator<T> {
 
     ListIterator(YGLinkedList<T> ygLinkedList, Node<T> head) {
         this.ygLinkedList = ygLinkedList;
-        next = head;
+        this.next = head;
     }
 
     public T next() {
+        Invalidator.nextMethodOutOfRange(nextIndex, ygLinkedList.size());
         Node<T> previousNode = next;
         next = previousNode.next();
         nextIndex++;

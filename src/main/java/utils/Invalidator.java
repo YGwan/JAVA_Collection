@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.NoSuchElementException;
+
 public class Invalidator {
 
     private final static String notAppreciateErrorMessage = "이 적절하지 않습니다..";
@@ -25,6 +27,12 @@ public class Invalidator {
     public static void iteratorRemoveNextIndexZero(int nextIndex) {
         if(nextIndex == 0) {
             throw new IllegalStateException(iteratorRemoveErrorMessage);
+        }
+    }
+
+    public static void nextMethodOutOfRange(int nextIndex, int size) {
+        if(nextIndex >= size) {
+            throw new NoSuchElementException(iteratorRemoveErrorMessage);
         }
     }
 }
