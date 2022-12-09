@@ -172,5 +172,11 @@ public class YGArrayList {
         public boolean hasPrevious() {
             return nextIndex > 0;
         }
+
+        public void remove() {
+            Invalidator.iteratorRemoveNextIndexZero(nextIndex);
+            YGArrayList.this.remove(nextIndex-1);
+            nextIndex--;
+        }
     }
 }
