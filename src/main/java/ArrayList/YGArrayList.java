@@ -148,35 +148,6 @@ public class YGArrayList {
     }
 
     public ListIterator listIterator() {
-        return new ListIterator();
-    }
-
-    public class ListIterator {
-
-        private  int nextIndex = 0;
-
-        public Object next() {
-            Invalidator.nextMethodOutOfRange(nextIndex, size);
-            return elementData[nextIndex++];
-        }
-
-        public boolean hasNext() {
-            return nextIndex < size;
-        }
-
-        public Object previous() {
-            Invalidator.previousMethodOutOfRange(nextIndex, size);
-            return elementData[--nextIndex];
-        }
-
-        public boolean hasPrevious() {
-            return nextIndex > 0;
-        }
-
-        public void remove() {
-            Invalidator.iteratorRemoveNextIndexZero(nextIndex);
-            YGArrayList.this.remove(nextIndex-1);
-            nextIndex--;
-        }
+        return new ListIterator(this, elementData);
     }
 }

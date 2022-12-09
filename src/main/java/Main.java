@@ -1,7 +1,5 @@
+import ArrayList.ListIterator;
 import ArrayList.YGArrayList;
-
-import java.util.ArrayList;
-import java.util.ListIterator;
 
 public class Main {
 
@@ -13,7 +11,7 @@ public class Main {
         numbers.add(1, 15);
         numbers.add(3,15);
         System.out.println(numbers);
-        YGArrayList.ListIterator li = numbers.listIterator();
+        ListIterator li = numbers.listIterator();
         while(li.hasNext()) {
             System.out.println(li.next());
         }
@@ -22,8 +20,5 @@ public class Main {
         System.out.println(li.previous());
         System.out.println(li.previous());
 
-        ArrayList<Integer> a = new ArrayList<>();
-        ListIterator<Integer> k = a.listIterator();
-        k.remove();
     }
 }
