@@ -1,6 +1,6 @@
 package LinkedList;
 
-import linkedList.YGLinkedList;
+import dataStructure.linkedList.YGLinkedList;
 import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayOutputStream;

@@ -25,20 +25,20 @@ public class Invalidator {
     }
 
     public static void iteratorRemoveNextIndexZero(int nextIndex) {
-        if(nextIndex == 0) {
+        if (nextIndex == 0) {
             throw new IllegalStateException(iteratorRemoveErrorMessage);
         }
     }
 
     public static void nextMethodOutOfRange(int nextIndex, int size) {
-        if(nextIndex >= size) {
+        if (nextIndex >= size) {
             throw new NoSuchElementException(iteratorRemoveErrorMessage);
         }
     }
 
-    public static void previousMethodOutOfRange(int nextIndex, int size) {
+    public static void previousMethodOutOfRange(int nextIndex) {
         int previousIndex = nextIndex - 1;
-        if(previousIndex < 0) {
+        if (previousIndex < 0) {
             throw new NoSuchElementException(iteratorRemoveErrorMessage);
         }
     }

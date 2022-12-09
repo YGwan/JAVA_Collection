@@ -1,13 +1,13 @@
-package linkedList;
+package dataStructure.linkedList;
 
+import dataStructure.YGList;
 import utils.Invalidator;
-
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class YGLinkedList<T> implements Iterable<T> {
+public class YGLinkedList<T> implements Iterable<T>, YGList<T> {
 
     private Node<T> head;
     private int size = 0;
@@ -21,8 +21,9 @@ public class YGLinkedList<T> implements Iterable<T> {
         }
     }
 
+    @Override
     public void add(int index, T input) {
-        Invalidator.outOfIndexRangeAdd(index,size);
+        Invalidator.outOfIndexRangeAdd(index, size);
         Node<T> newNode = new Node<>(input);
         if (index == 0) {
             newNode.updateNext(head);
@@ -36,24 +37,29 @@ public class YGLinkedList<T> implements Iterable<T> {
         size++;
     }
 
+    @Override
     public void add(T input) {
         addLast(input);
     }
 
+    @Override
     public void addFirst(T input) {
-        add(0,input);
+        add(0, input);
     }
 
+    @Override
     public void addLast(T input) {
         add(size, input);
     }
 
+    @Override
     public void remove() {
         remove(0);
     }
 
+    @Override
     public void remove(int index) {
-        Invalidator.outOfIndexRange(index,size);
+        Invalidator.outOfIndexRange(index, size);
         if (index == 0) {
             head = head.next();
         } else {
@@ -63,40 +69,46 @@ public class YGLinkedList<T> implements Iterable<T> {
         size--;
     }
 
+    @Override
     public void removeLast() {
         remove(size - 1);
     }
 
+    @Override
     public int size() {
         return size;
     }
 
+    @Override
     public boolean contains(T input) {
-        for(int index = 0; index < size; index++) {
-            if(get(index).equals(input)) return true;
+        for (int index = 0; index < size; index++) {
+            if (get(index).equals(input)) return true;
         }
         return false;
     }
 
+    @Override
     public void reverse() {
         YGLinkedList<T> currentNumbers = new YGLinkedList<>();
-        for(T input : this) {
+        for (T input : this) {
             currentNumbers.add(input);
         }
         int initialSize = this.size;
 
-        for(int index = 0; index < initialSize; index++) {
+        for (int index = 0; index < initialSize; index++) {
             remove();
         }
-        for(int index = 0; index < initialSize; index++) {
+        for (int index = 0; index < initialSize; index++) {
             addFirst(currentNumbers.get(index));
         }
     }
 
+    @Override
     public T get(int index) {
         return findNode(index).data();
     }
 
+    @Override
     public int indexOf(T data) {
         for (int index = 0; index < size; index++) {
             if (findNode(index).isSameData(data)) {
@@ -106,6 +118,15 @@ public class YGLinkedList<T> implements Iterable<T> {
         return -1;
     }
 
+    @Override
+    public void clear() {
+        int initialSize = size;
+        for(int index = 0; index < initialSize; index++) {
+            remove();
+        }
+    }
+
+    @Override
     public String toString() {
         if (head == null) {
             return "[]";

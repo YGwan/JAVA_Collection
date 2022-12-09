@@ -1,5 +1,5 @@
-import ArrayList.ListIterator;
-import ArrayList.YGArrayList;
+import dataStructure.arrayList.YGArrayList;
+import dataStructure.linkedList.YGLinkedList;
 
 public class Main {
 
@@ -9,16 +9,16 @@ public class Main {
         numbers.addFirst(0);
         numbers.addLast(10);
         numbers.add(1, 15);
-        numbers.add(3,15);
+        numbers.add(3, 7);
         System.out.println(numbers);
-        ListIterator<Integer> li = numbers.listIterator();
-        while(li.hasNext()) {
-            System.out.println(li.next());
-        }
-        System.out.println(li.previous());
-        System.out.println(li.previous());
-        System.out.println(li.previous());
-        System.out.println(li.previous());
-
+        numbers.reverse();
+        System.out.println(numbers);
+        YGLinkedList<Integer> a = new YGLinkedList<>();
+        a.add(10);
+        a.add(20);
+        a.add(30);
+        a.add(40);
+        a.clear();
+        System.out.println(a);
     }
 }

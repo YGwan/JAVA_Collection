@@ -1,7 +1,7 @@
 package LinkedList;
 
-import linkedList.ListIterator;
-import linkedList.YGLinkedList;
+import dataStructure.linkedList.ListIterator;
+import dataStructure.linkedList.YGLinkedList;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

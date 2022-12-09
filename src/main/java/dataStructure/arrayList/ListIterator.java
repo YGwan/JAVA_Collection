@@ -1,4 +1,4 @@
-package ArrayList;
+package dataStructure.arrayList;
 
 import utils.Invalidator;
 
@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 public class ListIterator<T> implements Iterator<T> {
 
-    private  int nextIndex = 0;
+    private int nextIndex = 0;
     private final YGArrayList<T> ygArrayList;
 
     public ListIterator(YGArrayList<T> ygArrayList) {
@@ -23,7 +23,7 @@ public class ListIterator<T> implements Iterator<T> {
     }
 
     public T previous() {
-        Invalidator.previousMethodOutOfRange(nextIndex, ygArrayList.size());
+        Invalidator.previousMethodOutOfRange(nextIndex);
         return ygArrayList.elementData(--nextIndex);
     }
 
@@ -33,7 +33,7 @@ public class ListIterator<T> implements Iterator<T> {
 
     public void remove() {
         Invalidator.iteratorRemoveNextIndexZero(nextIndex);
-        ygArrayList.remove(nextIndex-1);
+        ygArrayList.remove(nextIndex - 1);
         nextIndex--;
     }
 }
