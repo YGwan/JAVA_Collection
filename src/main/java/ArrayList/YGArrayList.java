@@ -146,4 +146,22 @@ public class YGArrayList {
             ygArrayListResult.append(", ");
         }
     }
+
+    public ListIterator listIterator() {
+        return new ListIterator();
+    }
+
+    public class ListIterator {
+
+        private  int nextIndex = 0;
+
+        public Object next() {
+            Invalidator.nextMethodOutOfRange(nextIndex, size);
+            return elementData[nextIndex++];
+        }
+
+        public boolean hasNext() {
+            return nextIndex < size;
+        }
+    }
 }
