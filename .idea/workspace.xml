@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : ArrayList ListIterator 구현 - remove 메서드 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ArrayList/ListIterator.java" afterDir="false" />
+    <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="refactor : ArrayList, ListIterator class 분리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArrayList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArrayList/ListIterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArrayList/YGArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArrayList/YGArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
@@ -93,7 +94,7 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="List.main" />
@@ -460,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670553665255</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="refactor : ArrayList, ListIterator class 분리">
+      <created>1670558876323</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1670558876323</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +487,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor : LinkedList의 remove함수 오버로딩 처리" />
     <MESSAGE value="refactor : ListIterator 클래스 분리" />
     <MESSAGE value="feat : iterator 구조 생성 및 구현 -&gt; foreach 사용 가능" />
     <MESSAGE value="fix : addFirst() 메서드로 메서드명 변경, add로직 추가" />
@@ -504,6 +511,7 @@
     <MESSAGE value="fix : ArrayList ListIterator 구현 - next, hasNext 메서드 구현" />
     <MESSAGE value="fix : ArrayList ListIterator 구현 - previous, hasPrevious 메서드 구현" />
     <MESSAGE value="feat : ArrayList ListIterator 구현 - previous, hasPrevious 메서드 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : ArrayList ListIterator 구현 - previous, hasPrevious 메서드 구현" />
+    <MESSAGE value="refactor : ArrayList, ListIterator class 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor : ArrayList, ListIterator class 분리" />
   </component>
 </project>

@@ -2,8 +2,11 @@ package ArrayList;
 
 import utils.Invalidator;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-public class YGArrayList {
+public class YGArrayList<T> implements Iterable<T> {
 
     private static final int DEFAULT_CAPACITY = 10;
     private static final Object[] EMPTY_ELEMENTDATA = {};
@@ -25,15 +28,15 @@ public class YGArrayList {
         }
     }
 
-    public void addFirst(Object element) {
+    public void addFirst(T element) {
         add(0, element);
     }
 
-    public void addLast(Object element) {
+    public void addLast(T element) {
         add(size, element);
     }
 
-    public void add(int index, Object element) {
+    public void add(int index, T element) {
         Invalidator.outOfIndexRangeAdd(index, size);
         resizeCapacity(size + 1);
         fastAdd(index);
@@ -41,7 +44,7 @@ public class YGArrayList {
         size++;
     }
 
-    public void add(Object element) {
+    public void add(T element) {
         add(size, element);
     }
 
@@ -50,7 +53,7 @@ public class YGArrayList {
         fastRemove(index);
     }
 
-    public void remove(Object inputValue) {
+    public void remove(T inputValue) {
         removeIfSameInputValue(inputValue);
     }
 
@@ -62,16 +65,16 @@ public class YGArrayList {
         remove(size-1);
     }
 
-    public Object get(int index) {
+    public T get(int index) {
         Invalidator.outOfIndexRange(index,size);
-        return elementData[index];
+        return elementData(index);
     }
 
     public int size() {
         return size;
     }
 
-    public int indexOf(Object value) {
+    public int indexOf(T value) {
         for (int index = 0; index < size; index++) {
             if (elementData[index] == value) {
                 return index;
@@ -87,7 +90,7 @@ public class YGArrayList {
         size = 0;
     }
 
-    private void removeIfSameInputValue(Object inputValue) {
+    private void removeIfSameInputValue(T inputValue) {
         for(int index = 0; index < size; index++) {
             if(elementData[index] == inputValue) {
                 fastRemove(index);
@@ -132,6 +135,10 @@ public class YGArrayList {
         }
     }
 
+    T elementData(int index) {
+        return (T) elementData[index];
+    }
+
     public String toString() {
         StringBuilder ygArrayListResult = new StringBuilder("[");
         for(int index = 0; index < size; index++) {
@@ -147,7 +154,22 @@ public class YGArrayList {
         }
     }
 
-    public ListIterator listIterator() {
-        return new ListIterator(this, elementData);
+    public ListIterator<T> listIterator() {
+        return new ListIterator<>(this);
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return listIterator();
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+        Iterable.super.forEach(action);
+    }
+
+    @Override
+    public Spliterator<T> spliterator() {
+        return Iterable.super.spliterator();
     }
 }

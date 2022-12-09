@@ -2,29 +2,29 @@ package ArrayList;
 
 import utils.Invalidator;
 
-public class ListIterator {
+import java.util.Iterator;
+
+public class ListIterator<T> implements Iterator<T> {
 
     private  int nextIndex = 0;
-    YGArrayList ygArrayList;
-    Object[] elementData;
+    private final YGArrayList<T> ygArrayList;
 
-    public ListIterator(YGArrayList ygArrayList, Object[] elementData) {
+    public ListIterator(YGArrayList<T> ygArrayList) {
         this.ygArrayList = ygArrayList;
-        this.elementData = elementData;
     }
 
-    public Object next() {
+    public T next() {
         Invalidator.nextMethodOutOfRange(nextIndex, ygArrayList.size());
-        return elementData[nextIndex++];
+        return ygArrayList.elementData(nextIndex++);
     }
 
     public boolean hasNext() {
         return nextIndex < ygArrayList.size();
     }
 
-    public Object previous() {
+    public T previous() {
         Invalidator.previousMethodOutOfRange(nextIndex, ygArrayList.size());
-        return elementData[--nextIndex];
+        return ygArrayList.elementData(--nextIndex);
     }
 
     public boolean hasPrevious() {
