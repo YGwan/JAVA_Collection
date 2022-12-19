@@ -1,8 +1,7 @@
 package dataStructure.linkedList;
 
-import utils.Invalidator;
-
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class ListIterator<T> implements Iterator<T> {
 
@@ -16,7 +15,9 @@ public class ListIterator<T> implements Iterator<T> {
     }
 
     public T next() {
-        Invalidator.nextMethodOutOfRange(nextIndex, ygLinkedList.size());
+        if (nextIndex >= ygLinkedList.size()) {
+            throw new NoSuchElementException("ListIterator가 가리키는 값이 존재하지 않습니다.");
+        }
         Node<T> previousNode = next;
         next = previousNode.next();
         nextIndex++;
@@ -28,7 +29,9 @@ public class ListIterator<T> implements Iterator<T> {
     }
 
     public void remove() {
-        Invalidator.iteratorRemoveNextIndexZero(nextIndex);
+        if (nextIndex == 0) {
+            throw new IllegalStateException("ListIterator가 가리키는 값이 존재하지 않습니다.");
+        }
         ygLinkedList.remove(nextIndex - 1);
         nextIndex--;
     }

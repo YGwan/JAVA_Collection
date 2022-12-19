@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37623e49-c040-4bba-8c02-33ca79b8d499" name="Changes" comment="feat : 구조 변경 및 YGList 구현, YGLinkedList, YGArrayList 연결 수행">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/YGList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dataStructure/AbstractYGList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArrayList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/arrayList/ListIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/arrayList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/arrayList/ListIterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/arrayList/YGArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/arrayList/YGArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/linkedList/ListIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/linkedList/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/YGLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/linkedList/YGLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Invalidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Invalidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/IteratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/IteratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList/ListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList/ListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/linkedList/ListIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/linkedList/ListIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataStructure/linkedList/YGLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataStructure/linkedList/YGLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,13 +91,29 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dataStructure" />
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ListTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="List.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IteratorTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="List.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ygArrayList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ygArrayList" />
+      <option name="MAIN_CLASS_NAME" value="ygArrayList.IteratorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,45 +122,28 @@
       <module name="List.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
+          <option name="PATTERN" value="ygLinkedList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="LinkedList" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.IteratorTest" />
+      <option name="MAIN_CLASS_NAME" value="ygLinkedList.IteratorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListTest$CheckPrint.useForeach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ListTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="List.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
+          <option name="PATTERN" value="ygArrayList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="LinkedList.ListTest" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.ListTest$CheckPrint" />
-      <option name="METHOD_NAME" value="useForeach" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ListTest$useServiceYGL.useIndexOf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="List.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="LinkedList.ListTest" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.ListTest$useServiceYGL" />
-      <option name="METHOD_NAME" value="useIndexOf" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ygArrayList" />
+      <option name="MAIN_CLASS_NAME" value="ygArrayList.ListTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,12 +152,12 @@
       <module name="List.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
+          <option name="PATTERN" value="ygLinkedList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="LinkedList" />
-      <option name="MAIN_CLASS_NAME" value="LinkedList.ListTest" />
+      <option name="MAIN_CLASS_NAME" value="ygLinkedList.ListTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ListTest (1)" />
+        <item itemvalue="JUnit.IteratorTest (1)" />
         <item itemvalue="JUnit.ListTest" />
         <item itemvalue="JUnit.IteratorTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ListTest$useServiceYGL.useIndexOf" />
-        <item itemvalue="JUnit.ListTest$CheckPrint.useForeach" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +186,7 @@
       <workItem from="1670253825686" duration="973000" />
       <workItem from="1670256146919" duration="31705000" />
       <workItem from="1670424764008" duration="21822000" />
+      <workItem from="1671434652141" duration="1148000" />
     </task>
     <task id="LOCAL-00001" summary="feat : LinkedList 구조 잡기, Node 구조 구현">
       <created>1670145415768</created>
@@ -489,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670562355028</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="feat : 구조 변경 및 YGList 구현, YGLinkedList, YGArrayList 연결 수행">
+      <created>1670563539954</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670563539954</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,8 +1,7 @@
 package dataStructure.arrayList;
 
-import utils.Invalidator;
-
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class ListIterator<T> implements Iterator<T> {
 
@@ -14,8 +13,12 @@ public class ListIterator<T> implements Iterator<T> {
     }
 
     public T next() {
-        Invalidator.nextMethodOutOfRange(nextIndex, ygArrayList.size());
-        return ygArrayList.elementData(nextIndex++);
+        if (nextIndex >= ygArrayList.size()) {
+            throw new NoSuchElementException("ListIterator가 가리키는 값이 존재하지 않습니다.");
+        }
+        T element = ygArrayList.get(nextIndex);
+        nextIndex++;
+        return element;
     }
 
     public boolean hasNext() {
@@ -23,8 +26,12 @@ public class ListIterator<T> implements Iterator<T> {
     }
 
     public T previous() {
-        Invalidator.previousMethodOutOfRange(nextIndex);
-        return ygArrayList.elementData(--nextIndex);
+        int previousIndex = nextIndex - 1;
+        if (previousIndex < 0) {
+            throw new NoSuchElementException("ListIterator가 가리키는 값이 존재하지 않습니다.");
+        }
+        nextIndex--;
+        return ygArrayList.get(nextIndex);
     }
 
     public boolean hasPrevious() {
@@ -32,8 +39,10 @@ public class ListIterator<T> implements Iterator<T> {
     }
 
     public void remove() {
-        Invalidator.iteratorRemoveNextIndexZero(nextIndex);
-        ygArrayList.remove(nextIndex - 1);
+        if (nextIndex == 0) {
+            throw new IllegalStateException("ListIterator가 가리키는 값이 존재하지 않습니다.");
+        }
         nextIndex--;
+        ygArrayList.remove(nextIndex);
     }
 }
