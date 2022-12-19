@@ -1,4 +1,4 @@
-package LinkedList;
+package ygLinkedList;
 
 import dataStructure.linkedList.YGLinkedList;
 import org.junit.jupiter.api.*;
