@@ -5,6 +5,7 @@ import dataStructure.linkedList.YGLinkedList;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -23,7 +24,7 @@ public class IteratorTest {
 
     @DisplayName("ListIterator의 메서드를 사용한다.")
     @Nested
-    class UseServiceYGLi링nkedList {
+    class UseServiceYGLinkedList {
 
         private final int size = numbers.size();
 
@@ -55,7 +56,7 @@ public class IteratorTest {
                     .isInstanceOf(IllegalStateException.class);
         }
 
-        @DisplayName("nextIndex가 0이 아닐 경우 listIterator의 remove함수가 nextIndex의 전 index의 요소를 제거한다.")
+        @DisplayName("nextIndex가 0이 아닐 경우 값을 제거한다.")
         @Test
         public void useRemoveCorrect() {
             ListIterator<Integer> listIterator = numbers.listIterator();

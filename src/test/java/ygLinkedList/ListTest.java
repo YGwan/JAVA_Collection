@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ListTest {
 
-    List<Integer> originalNumbers = List.of(1, 2, 3, 4, 5);
+    private final List<Integer> originalNumbers = List.of(1, 2, 3, 4, 5);
 
     @DisplayName("YGLinkedList를 생성/초기화를 진행한다.")
     @Test
@@ -27,38 +27,42 @@ public class ListTest {
     @DisplayName("YGLinkedList에 값을 추가한다.")
     @Nested
     class AddYGLinkedList {
-        @DisplayName("해당 리스트의 시작점에 값을 추가한다.")
+
+        private final int inputIndex = 2;
+        private final int inputData = 6;
+
+        @DisplayName("리스트의 시작점에 값을 추가한다.")
         @Test
         public void addFirstYGLinkedList() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            numbers.addFirst(0);
-            assertThat(numbers).containsExactly(0, 1, 2, 3, 4, 5);
+            numbers.addFirst(inputData);
+            assertThat(numbers.get(0)).isEqualTo(inputData);
         }
 
-        @DisplayName("해당 리스트의 끝점에 값을 추가한다.")
+        @DisplayName("리스트의 끝점에 값을 추가한다.")
         @Test
         public void addLastYGLinkedList() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            numbers.addLast(6);
-            assertThat(numbers).containsExactly(1, 2, 3, 4, 5, 6);
+            numbers.addLast(inputData);
+            assertThat(numbers.get(numbers.size() - 1)).isEqualTo(inputData);
 
-            numbers.add(7);
-            assertThat(numbers).containsExactly(1, 2, 3, 4, 5, 6, 7);
+            numbers.add(inputData);
+            assertThat(numbers.get(numbers.size() - 1)).isEqualTo(inputData);
         }
 
-        @DisplayName("지정한 인덱스 위치에 값을 추가한다.")
+        @DisplayName("인덱스 위치에 값을 추가한다.")
         @Test
         public void addIndexPointYGLinkedList() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            numbers.add(2, 6);
-            assertThat(numbers).containsExactly(1, 2, 6, 3, 4, 5);
+            numbers.add(inputIndex, inputData);
+            assertThat(numbers.get(inputIndex)).isEqualTo(inputData);
         }
     }
 
     @DisplayName("YGLinkedList에 값을 제거한다.")
     @Nested
     class RemoveYGLinkedList {
-        @DisplayName("해당 리스트의 시작점에 값을 제거한다.")
+        @DisplayName("리스트의 시작점에 값을 제거한다.")
         @Test
         public void removeFirstYGLinkedList() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
@@ -66,7 +70,7 @@ public class ListTest {
             assertThat(numbers).containsExactly(2, 3, 4, 5);
         }
 
-        @DisplayName("해당 리스트의 끝점에 값을 제거한다.")
+        @DisplayName("리스트의 끝점에 값을 제거한다.")
         @Test
         public void removeLastYGLinkedList() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
@@ -74,7 +78,7 @@ public class ListTest {
             assertThat(numbers).containsExactly(1, 2, 3, 4);
         }
 
-        @DisplayName("지정한 인덱스 위치에 값을 제거한다.")
+        @DisplayName("인덱스 위치에 값을 제거한다.")
         @Test
         public void removeIndexPointYGLinkedList() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
@@ -86,28 +90,32 @@ public class ListTest {
     @DisplayName("YGLinkedList의 정보를 반환한다.")
     @Nested
     class UseServiceYGLinkedList {
-        @DisplayName("해당 리스트의 크기를 반환한다.")
+
+        private final int inputIndex = 0;
+        private final int inputIndexOfData = 1;
+
+        @DisplayName("리스트의 크기 값을 확인한다.")
         @Test
         public void useSize() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            assertThat(numbers.size()).isEqualTo(5);
+            assertThat(numbers.size()).isEqualTo(originalNumbers.size());
         }
 
-        @DisplayName("numbers 리스트에 값이 있을 경우 True를 반환한다.")
+        @DisplayName("리스트에 값이 있을 경우 True를 반환하는지 확인한다.")
         @Test
         public void useContainsTrueStatus() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            assertThat(numbers.contains(1)).isTrue();
+            assertThat(numbers.contains(originalNumbers.get(0))).isTrue();
         }
 
-        @DisplayName("numbers 리스트에 값이 없을 경우 False 반환한다.")
+        @DisplayName("리스트에 값이 없을 경우 False 반환하는지 한다.")
         @Test
         public void useContainsFalseStatus() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            assertThat(numbers.contains(7)).isFalse();
+            assertThat(numbers.contains(Integer.MAX_VALUE)).isFalse();
         }
 
-        @DisplayName("numbers 리스트를 역순으로 변환한다.")
+        @DisplayName("리스트의 역순으로 변환한다.")
         @Test
         public void useReverse() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
@@ -115,22 +123,22 @@ public class ListTest {
             assertThat(numbers).containsExactly(5, 4, 3, 2, 1);
         }
 
-        @DisplayName("지정한 인덱스에 해당하는 값이 잘 반환되는지 확인한다.")
+        @DisplayName("인덱스에 해당하는 값을 반환한다.")
         @Test
         public void useGet() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            assertThat(numbers.get(1)).isEqualTo(2);
+            assertThat(numbers.get(inputIndex)).isEqualTo(inputIndexOfData);
         }
 
-        @DisplayName("인덱스에 해당하는 값을 반환한다.")
+        @DisplayName("인덱스에 해당하는 값이 잘 반환되는지 확인한다.")
         @Test
         public void useIndexOf() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            assertThat(numbers.indexOf(3)).isEqualTo(2);
+            assertThat(numbers.indexOf(inputIndexOfData)).isEqualTo(inputIndex);
         }
     }
 
-    @DisplayName("출력이 제대로 잘 되는지 확인한다.")
+    @DisplayName("출력을 확인한다.")
     @Nested
     class CheckPrint {
         private PrintStream standardOut;
@@ -153,11 +161,11 @@ public class ListTest {
             return captor.toString().trim();
         }
 
-        @DisplayName("foreach를 사용해서 값을 조회한다.")
+        @DisplayName("foreach를 사용한 출력을 확인한다.")
         @Test
         public void useForeach() {
             YGLinkedList<Integer> numbers = new YGLinkedList<>(originalNumbers);
-            for(Integer number : numbers) {
+            for (Integer number : numbers) {
                 System.out.println(number);
             }
             assertEquals("1\n2\n3\n4\n5", output());
